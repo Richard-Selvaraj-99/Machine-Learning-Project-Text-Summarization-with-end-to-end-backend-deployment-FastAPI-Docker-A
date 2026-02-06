@@ -1,3 +1,11 @@
+graph TD
+    A[Data Ingestion] -->|Downloads ZIP| B[Artifacts/Raw]
+    B --> C{Data Validation}
+    C -->|Pass| D[Data Transformation]
+    C -->|Fail| E[Stop Pipeline]
+    D -->|Tokenize| F[Processed Dataset]
+    F --> G[Model Training]
+
 please do click on the work flow to see the working part of the workflow when i used to deploy the application now due to moving forward with newer projects had to discconect this one form aws
 [![workflow](https://github.com/boomshineking/Text-Summarization-NLP-Project/actions/workflows/main.yaml/badge.svg)](https://github.com/boomshineking/Text-Summarization-NLP-Project/actions/runs/14457539717)
 # End to end Text-Summarizer-Project
